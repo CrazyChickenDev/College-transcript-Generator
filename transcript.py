@@ -30,31 +30,31 @@ def getCount(score, excel, passd, faild):
 # A function to determine score grade and remarks
 def getScoreInfo(score):
     if score > 74 and score <= 100:
-        return str(score)+"\t\t  \tA\tExcellent"
+        return str(score)+"\t\t  \tA\t \tExcellent"
     
     elif score > 69 and score < 75:
-        return str(score)+"\t\t  \tA\tVery Good"
+        return str(score)+"\t\t  \tA\t \tVery Good"
 
     elif score > 64 and score < 70:
-        return str(score)+"\t\t  \tB\tGood"
+        return str(score)+"\t\t  \tB\t \tGood"
         
     elif score > 59 and score < 65:
-        return str(score)+"\t\t  \tB\tCredit"
+        return str(score)+"\t\t  \tB\t \tCredit"
         
     elif score > 54 and score < 60:
-        return str(score)+"\t\t  C\t\t  Credit"
+        return str(score)+"\t\t  \tC\t \tCredit"
         
     elif score > 49 and score < 55:
-        return str(score)+"\t\t  C\t\t  Pass"
+        return str(score)+"\t\t  \tC\t \tPass"
         
     elif score > 44 and score < 50:
-        return str(score)+"\t\t  D\t\t  Pass"
+        return str(score)+"\t\t  \tD\t \tPass"
         
     elif score > 39 and score < 45:
-        return str(score)+"\t\t  F\t\t  Fail"
+        return str(score)+"\t\t  \tF\t \tFail"
         
     elif score > 0 and score < 45:
-        return str(score)+"\t\t  F\t\t  Fail"
+        return str(score)+"\t\t  \tF\t \tFail"
 
 
 #=================== MAIN PROGRAM BLOCK ============================
@@ -100,8 +100,8 @@ while runcount < len(rawFileContents):
                 #print(column, ":\t", getName(datafeedArray[0], datafeedArray[1]))
                 filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", ("Session: Final\nYear: {}\n\n".format(yr.year))+"\n")
                 #print("Session: Final\nYear: {}\n\n".format(yr.year))
-                filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", "Courses\t    Score\t  Grade\t  Remarks\n=======\t    =====\t  =====\t  =======\n")
-                #print("Courses\t    Score\t  Grade\t  Remarks\n=======\t    =====\t  =====\t  =======\n")
+                filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", "Courses\t    Score\t  Grade\t   Remarks\n=======\t    =====\t  =====\t   =======\n")
+                #print("Courses\t    Score\t  Grade\t   Remarks\n=======\t    =====\t  =====\t   =======\n")
                 
             else:
                 filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", (column+"\t  "+getScoreInfo(int(datafeedArray[scoreCounter])))+"\n")
