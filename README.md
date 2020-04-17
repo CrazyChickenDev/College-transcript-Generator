@@ -4,4 +4,5 @@ This program was designed to generate a <kbd>.docx</kbd> file which consists of 
 
 Note: The contents of the input file however must follow a structure. 
 
+
 (Further improvements are however welcomed)
