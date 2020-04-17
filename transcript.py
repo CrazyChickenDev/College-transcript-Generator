@@ -30,16 +30,16 @@ def getCount(score, excel, passd, faild):
 # A function to determine score grade and remarks
 def getScoreInfo(score):
     if score > 74 and score <= 100:
-        return str(score)+"\t\t  A\t\t  Excellent"
+        return str(score)+"\t\t  \tA\tExcellent"
     
     elif score > 69 and score < 75:
-        return str(score)+"\t\t  A\t\t  Very Good"
+        return str(score)+"\t\t  \tA\tVery Good"
 
     elif score > 64 and score < 70:
-        return str(score)+"\t\t  B\t\t  Good"
+        return str(score)+"\t\t  \tB\tGood"
         
     elif score > 59 and score < 65:
-        return str(score)+"\t\t  B\t\t  Credit"
+        return str(score)+"\t\t  \tB\tCredit"
         
     elif score > 54 and score < 60:
         return str(score)+"\t\t  C\t\t  Credit"
@@ -63,7 +63,7 @@ def getScoreInfo(score):
 rawFileContents, datafeedArray, studentsScores = [], [], []
 runcount, innercount = 0, 0
 yr = datetime.datetime.now()
-generalRemarks = "\nRemarks: You did Good in {} Course(s), Passed {} Course(s) and Failed {} \tCourse(s)\n"
+generalRemarks = "\nRemarks: You did Good in {} Course(s), Passed {} Course(s) and Failed{}\tCourse(s)\n"
 advice = "\n\tNote: Failed Courses are Advised to be retaken\n\t*******************************************************\n\n"
 fileHeader = "\t\t\tFINAL EXAMINATION RESULTS\n\t\t\t************************\n\t\t\t************************\n"
 
