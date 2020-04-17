@@ -30,31 +30,31 @@ def getCount(score, excel, passd, faild):
 # A function to determine score grade and remarks
 def getScoreInfo(score):
     if score > 74 and score <= 100:
-        return str(score)+"\t\t  A1\t\t  Excellent"
+        return str(score)+"\t\t  A\t\t  Excellent"
     
     elif score > 69 and score < 75:
-        return str(score)+"\t\t  B2\t\t  Very Good"
+        return str(score)+"\t\t  A\t\t  Very Good"
 
     elif score > 64 and score < 70:
-        return str(score)+"\t\t  B3\t\t  Good"
+        return str(score)+"\t\t  B\t\t  Good"
         
     elif score > 59 and score < 65:
-        return str(score)+"\t\t  C4\t\t  Credit"
+        return str(score)+"\t\t  B\t\t  Credit"
         
     elif score > 54 and score < 60:
-        return str(score)+"\t\t  C5\t\t  Credit"
+        return str(score)+"\t\t  C\t\t  Credit"
         
     elif score > 49 and score < 55:
-        return str(score)+"\t\t  C6\t\t  Credit"
+        return str(score)+"\t\t  C\t\t  Pass"
         
     elif score > 44 and score < 50:
-        return str(score)+"\t\t  D7\t\t  Pass"
+        return str(score)+"\t\t  D\t\t  Pass"
         
     elif score > 39 and score < 45:
-        return str(score)+"\t\t  D8\t\t  Pass"
+        return str(score)+"\t\t  F\t\t  Fail"
         
-    elif score > 0 and score < 40:
-        return str(score)+"\t\t  F9\t\t  Fail"
+    elif score > 0 and score < 45:
+        return str(score)+"\t\t  F\t\t  Fail"
 
 
 
@@ -67,7 +67,7 @@ runcount, innercount = 0, 0
 yr = datetime.datetime.now()
 generalRemarks = "\nRemarks: You did Good in {} Course(s), Passed {} Course(s) and Failed {} \tCourse(s)\n"
 advice = "\n\tNote: Failed and Pass Courses are Advised to be retaken\n\t*******************************************************\n\n"
-fileHeader = "\t\t\tFINAL EXAMINATION RESULT\n\t\t\t************************\n\t\t\t************************\n"
+fileHeader = "\t\t\tFINAL EXAMINATION RESULTS\n\t\t\t************************\n\t\t\t************************\n"
 
 #Opening the input file
 try:
