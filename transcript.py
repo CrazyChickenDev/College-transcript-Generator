@@ -124,7 +124,7 @@ while runcount < len(rawFileContents):
     if runcount == (len(rawFileContents)-1):
         break
 
-print("Done...")
+print("Done...All transcipts have been generated in the resulting folder with respect to the Students")
                 
     
 
