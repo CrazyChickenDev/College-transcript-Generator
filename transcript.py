@@ -65,7 +65,7 @@ def getScoreInfo(score):
 rawFileContents, datafeedArray, studentsScores = [], [], []
 runcount, innercount = 0, 0
 yr = datetime.datetime.now()
-generalRemarks = "\nRemarks: You did Good in {} Course(s), Pass in {} Course(s) and Failed {} \t   Course(s)\n"
+generalRemarks = "\nRemarks: You did Good in {} Course(s), Passed {} Course(s) and Failed {} \tCourse(s)\n"
 advice = "\n\tNote: Failed and Pass Courses are Advised to be retaken\n\t*******************************************************\n\n"
 fileHeader = "\t\t\tFINAL EXAMINATION RESULT\n\t\t\t************************\n\t\t\t************************\n"
 
@@ -81,7 +81,7 @@ except ValueError as e:
 for lines in infile:
     rawFileContents.append(lines.split())
 
-# Creating anoter list to contain Student's details
+# Creating another list to contain Student's details
 for data in rawFileContents:
     if data == rawFileContents[0]:
         pass
@@ -102,8 +102,8 @@ while runcount < len(rawFileContents):
                 #print(column, ":\t", getName(datafeedArray[0], datafeedArray[1]))
                 filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", ("Session: Final\nYear: {}\n\n".format(yr.year))+"\n")
                 #print("Session: Final\nYear: {}\n\n".format(yr.year))
-                filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", "Subjects\t  Score\t  Grade\t  Remarks\n========\t  =====\t  =====\t  =======\n")
-                #print("Subjects\t  Score\t  Grade\t  Remarks\n========\t  =====\t  =====\t  =======\n")
+                filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", "Courses\t  Score\t  Grade\t  Remarks\n========\t  =====\t  =====\t  =======\n")
+                #print("Courses\t  Score\t  Grade\t  Remarks\n========\t  =====\t  =====\t  =======\n")
                 
             else:
                 filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", (column+"\t  "+getScoreInfo(int(datafeedArray[scoreCounter])))+"\n")
