@@ -1,4 +1,4 @@
-Name		    Mathematics   English   Physics   Chemistry   Economics   Geography  Biology   Agriculture    Language
+Name		     CPE311       CPE375    CPE371     CPE324       CPE313     CPE319     CPE314     CPE382        CPE362
 Nwaobi Daniel	   78		    54	      55		 88	          62		 65	        55	       51	  	     66
 Nwaobi Ana	       75		    85	      95		 85	          75		 96	        75	       88	  	     77
 Ryan Reynolds	   54		    65	      59		 34	          45		 30	        68	       65	  	     50

@@ -100,8 +100,8 @@ while runcount < len(rawFileContents):
                 #print(column, ":\t", getName(datafeedArray[0], datafeedArray[1]))
                 filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", ("Session: Final\nYear: {}\n\n".format(yr.year))+"\n")
                 #print("Session: Final\nYear: {}\n\n".format(yr.year))
-                filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", "Courses\t    Score\t   Grade\t   Remarks\n=======\t    =====\t     =====\t     =======\n")
-                #print("Courses\t    Score\t   Grade\t   Remarks\n=======\t    =====\t     =====\t     =======\n")
+                filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", "Courses\t    Score\t  Grade\t  Remarks\n=======\t    =====\t  =====\t  =======\n")
+                #print("Courses\t    Score\t  Grade\t  Remarks\n=======\t    =====\t  =====\t  =======\n")
                 
             else:
                 filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", (column+"\t  "+getScoreInfo(int(datafeedArray[scoreCounter])))+"\n")
