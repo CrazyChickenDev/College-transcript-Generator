@@ -20,11 +20,11 @@ def getName(fn, ln):
 
 #??????
 def getCount(score, excel, passd, faild):
-    if score > 49 and score <= 100:
+    if score > 55 and score <= 100:
         excel +=1
-    elif score > 39 and score < 50:
+    elif score > 45 and score < 55:
         passd +=1
-    elif score > 0 and score < 40:
+    elif score > 0 and score < 45:
         faild +=1
 
 # A function to determine score grade and remarks
@@ -57,8 +57,6 @@ def getScoreInfo(score):
         return str(score)+"\t\t  F\t\t  Fail"
 
 
-
-
 #=================== MAIN PROGRAM BLOCK ============================
 
 #Variable decalarations
@@ -66,7 +64,7 @@ rawFileContents, datafeedArray, studentsScores = [], [], []
 runcount, innercount = 0, 0
 yr = datetime.datetime.now()
 generalRemarks = "\nRemarks: You did Good in {} Course(s), Passed {} Course(s) and Failed {} \tCourse(s)\n"
-advice = "\n\tNote: Failed and Pass Courses are Advised to be retaken\n\t*******************************************************\n\n"
+advice = "\n\tNote: Failed Courses are Advised to be retaken\n\t*******************************************************\n\n"
 fileHeader = "\t\t\tFINAL EXAMINATION RESULTS\n\t\t\t************************\n\t\t\t************************\n"
 
 #Opening the input file
@@ -102,16 +100,16 @@ while runcount < len(rawFileContents):
                 #print(column, ":\t", getName(datafeedArray[0], datafeedArray[1]))
                 filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", ("Session: Final\nYear: {}\n\n".format(yr.year))+"\n")
                 #print("Session: Final\nYear: {}\n\n".format(yr.year))
-                filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", "Courses\t  Score\t  Grade\t  Remarks\n========\t  =====\t  =====\t  =======\n")
-                #print("Courses\t  Score\t  Grade\t  Remarks\n========\t  =====\t  =====\t  =======\n")
+                filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", "Courses\t    Score\t   Grade\t   Remarks\n=======\t    =====\t     =====\t     =======\n")
+                #print("Courses\t    Score\t   Grade\t   Remarks\n=======\t    =====\t     =====\t     =======\n")
                 
             else:
                 filewriter(getName(datafeedArray[0], datafeedArray[1])+" Transcript.doc", (column+"\t  "+getScoreInfo(int(datafeedArray[scoreCounter])))+"\n")
                 #print(column, "\t  ", getScoreInfo(int(datafeedArray[scoreCounter])))
                 #counting excellent, pass and failed courses
-                if int(datafeedArray[scoreCounter]) > 49 and int(datafeedArray[scoreCounter]) <= 100: great +=1
-                elif int(datafeedArray[scoreCounter]) > 39 and int(datafeedArray[scoreCounter]) < 50: passed +=1
-                elif int(datafeedArray[scoreCounter]) > 0 and int(datafeedArray[scoreCounter]) < 40: failed +=1
+                if int(datafeedArray[scoreCounter]) > 55 and int(datafeedArray[scoreCounter]) <= 100: great +=1
+                elif int(datafeedArray[scoreCounter]) > 45 and int(datafeedArray[scoreCounter]) < 55: passed +=1
+                elif int(datafeedArray[scoreCounter]) > 0 and int(datafeedArray[scoreCounter]) < 45: failed +=1
                 else: pass
                 scoreCounter +=1
                         
