@@ -63,7 +63,7 @@ def getScoreInfo(score):
 rawFileContents, datafeedArray, studentsScores = [], [], []
 runcount, innercount = 0, 0
 yr = datetime.datetime.now()
-generalRemarks = "\nRemarks: You did Good in {} Course(s), Passed {} Course(s) and Failed{}\tCourse(s)\n"
+generalRemarks = "\nRemarks: You did Good in {} Course(s), Passed {} Course(s) and Failed {} Course(s)\n"
 advice = "\n\tNote: Failed Courses are Advised to be retaken\n\t*******************************************************\n\n"
 fileHeader = "\t\t\tFINAL EXAMINATION RESULTS\n\t\t\t************************\n\t\t\t************************\n"
 
